@@ -1,7 +1,7 @@
 from typing import Any, List, Optional
 
 from pydantic import BaseModel
-from tgApp.processing.validation import SmilesDataInputSchema
+from tgboost.processing.validation import SmilesDataInputSchema
 
 
 class PredictionResults(BaseModel):

@@ -2,9 +2,9 @@ from typing import Generator
 
 import pandas as pd
 import pytest
-import tgApp.processing.smiles_manager as sm
+import tgboost.processing.smiles_manager as sm
 from fastapi.testclient import TestClient
-from tgApp.config.core import DATASET_DIR, config
+from tgboost.config.core import DATASET_DIR, config
 
 from AzothApp.main import app
 

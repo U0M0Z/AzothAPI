@@ -5,8 +5,8 @@ import pandas as pd
 from fastapi import APIRouter, HTTPException
 from fastapi.encoders import jsonable_encoder
 from loguru import logger
-from tgApp import __version__ as model_version
-from tgApp.predict import make_prediction
+from tgboost import __version__ as model_version
+from tgboost.predict import make_prediction
 
 from AzothApp import __version__, schemas
 from AzothApp.config import settings

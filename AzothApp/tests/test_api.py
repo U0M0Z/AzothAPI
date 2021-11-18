@@ -2,10 +2,10 @@ import math
 
 import numpy as np
 import pandas as pd
-import tgApp.processing.smiles_manager as sm
+import tgboost.processing.smiles_manager as sm
 from fastapi.testclient import TestClient
-from tgApp.config.core import config
-from tgApp.predict import make_prediction
+from tgboost.config.core import config
+from tgboost.predict import make_prediction
 
 
 def test_make_prediction(client: TestClient, test_data: pd.DataFrame) -> None:

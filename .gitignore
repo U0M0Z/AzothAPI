@@ -6,9 +6,4 @@
 .tox
 .vscode
 
-# Folders with wheels for pypi
-build
-dist
-#tgApp.egg-info ##add the files from the built command
-
 # Additional Files
