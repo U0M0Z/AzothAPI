@@ -2,7 +2,7 @@
 AzothApp is a RestfulAPI built to deploy **tgBoost** and other AI models for inference of physical properties of chemical compounds involved in atmospheric chemistry.
 
 ## Motivation
-([**tgBoost**](https://pubs.rsc.org/en/content/articlelanding/2022/ea/d1ea00090j#!divRelatedContent&articles)) is a ML model inferring  <em>T</em><sub>g</sub> of monomer organic molecules from molecular structures expressed as molecular embeddings. AzothApp provides the RestfulAPI of tgBoost to be integrated in frontend development and for online users of the model.
+[**tgBoost**](https://pubs.rsc.org/en/content/articlelanding/2022/ea/d1ea00090j#!divRelatedContent&articles) is a ML model inferring  <em>T</em><sub>g</sub> of monomer organic molecules from molecular structures expressed as molecular embeddings. AzothApp provides the RestfulAPI of tgBoost to be integrated in frontend development and for online users of the model.
 
 ## Requirements
 * **Python >=3.7.0, <3.8** (Python 2.x is [not supported](http://www.python3statement.org/))
