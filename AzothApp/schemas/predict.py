@@ -2,6 +2,7 @@ from typing import Any, List, Optional
 
 from pydantic import BaseModel
 from tgboost.processing.validation import SmilesDataInputSchema
+from tgboost.processing.validation import MultipleSmilesDataInputs
 
 
 class PredictionResults(BaseModel):
@@ -12,7 +13,7 @@ class PredictionResults(BaseModel):
 
 class MultipleSmilesDataInputs(BaseModel):
     inputs: List[SmilesDataInputSchema]
-
+    
     class Config:
         # There might be an error here, it should be "SMILE" : "np.array([embedding])"
         # JSON does not read np.arrays, so most likely you have to convert the array

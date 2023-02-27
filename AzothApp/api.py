@@ -11,8 +11,8 @@ from tgboost.predict import make_prediction
 from AzothApp import __version__, schemas
 from AzothApp.config import settings
 
-api_router = APIRouter()
 
+api_router = APIRouter()
 
 # Here we define the other routers to be used
 @api_router.get("/health", response_model=schemas.Health, status_code=200)
@@ -29,11 +29,13 @@ def health() -> dict:
 
 @api_router.post("/predict", response_model=schemas.PredictionResults, status_code=200)
 async def predict(input_data: schemas.predict.MultipleSmilesDataInputs) -> Any:
+
+    print('My name is tgBoost')
     """
     Make $T_{g}$ prediction with the tgBoost model
     """
-
-    input_df = pd.DataFrame(jsonable_encoder(input_data.inputs))
+    input_data_list = input_data.inputs
+    input_df = pd.DataFrame(jsonable_encoder(input_data.inputs))    
     print(input_df)
 
     # Advanced: You can improve performance of your API by rewriting the

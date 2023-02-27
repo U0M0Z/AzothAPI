@@ -7,4 +7,5 @@
 .vscode
 
 # Additional Files
+./AzothApp/api_debugging.py
 **/__pycache__
