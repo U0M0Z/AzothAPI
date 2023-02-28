@@ -34,8 +34,11 @@ async def predict(input_data: schemas.predict.MultipleSmilesDataInputs) -> Any:
     """
     Make $T_{g}$ prediction with the tgBoost model
     """
-    input_data_list = input_data.inputs
-    input_df = pd.DataFrame(jsonable_encoder(input_data.inputs))    
+
+    input_SMILES_list = jsonable_encoder(input_data.inputs)[0]['SMILES'].replace(' ', '').split(',')
+
+    input_df = pd.DataFrame()
+    input_df['SMILES'] = input_SMILES_list
     print(input_df)
 
     # Advanced: You can improve performance of your API by rewriting the
@@ -43,6 +46,7 @@ async def predict(input_data: schemas.predict.MultipleSmilesDataInputs) -> Any:
     logger.info(f"Making prediction on inputs: {input_data.inputs}")
     # results = make_prediction(input_data=input_df.replace({np.nan: None}))
     results = make_prediction(input_data=input_df)
+    print('results =', results)
 
     if results["errors"] is not None:
         logger.warning(f"Prediction validation error: {results.get('errors')}")
