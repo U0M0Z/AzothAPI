@@ -11,8 +11,9 @@ class PredictionResults(BaseModel):
     predictions: Optional[List[float]]
 
 
-class MultipleSmilesDataInputs(BaseModel):
+class MultipleSmilesDataList(BaseModel):
     inputs: List[SmilesDataInputSchema]
+    #inputs: MultipleSmilesDataInputs
     
     class Config:
         # There might be an error here, it should be "SMILE" : "np.array([embedding])"

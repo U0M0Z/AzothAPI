@@ -26,7 +26,7 @@ class Settings(BaseSettings):
         "https://localhost:8000",  # type: ignore
     ]
 
-    PROJECT_NAME: str = "tgBoost"
+    PROJECT_NAME: str = "AzothApp"
 
     class Config:
         case_sensitive = True
