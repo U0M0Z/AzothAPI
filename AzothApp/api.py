@@ -2,7 +2,7 @@ import json
 from typing import Any
 
 import pandas as pd
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Query
 from fastapi.encoders import jsonable_encoder
 from loguru import logger
 from tgboost import __version__ as model_version
@@ -13,7 +13,6 @@ from AzothApp.config import settings
 
 from pydantic import BaseModel
 from typing import Optional, List
-from fastapi import Query
 
 
 api_router = APIRouter()
